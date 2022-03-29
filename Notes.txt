@@ -1,0 +1,34 @@
+Python Flask Web Development Tutorial
+[source: codewithharry]
+
+Commands:
+pip install virtualenv
+virtualenv env
+Set-ExecutionPolicy unrestricted [run in powershell]
+.\env\Scripts\activate.ps1  [shortcut: type env and press Tab key and so on]
+pip install flask [in same env]
+python .\app.py
+
+
+
+heroku login
+
+pip install gunicorn
+pip freeze requirements.txt
+Procfile
+web:gunicorn app:app
+
+git init
+git add .
+git commit -m "Initial commmit"
+
+heroku create todo-codewithharry
+git remote -v
+git push heroku master
+
+
+
+Websites:
+getbootstrap.com 
+https://flask.palletsprojects.com/en/2.0.x/quickstart/
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/
