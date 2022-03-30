@@ -35,3 +35,11 @@ https://flask.palletsprojects.com/en/2.0.x/quickstart/
 https://flask-sqlalchemy.palletsprojects.com/en/2.x/
 https://signup.heroku.com/account
 https://devcenter.heroku.com/articles/heroku-cli
+
+
+
+Note:
+If you make changes to your code, then you have to do these commands again - 
+git add .
+git commit -m ""
+git push heroku master
