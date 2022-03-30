@@ -9,10 +9,8 @@ Set-ExecutionPolicy unrestricted [run in powershell]
 pip install flask [in same env]
 python .\app.py
 
-
-
+heroku [to check heroku is istalled or not or else install and restart ide]
 heroku login
-
 pip install gunicorn
 pip freeze requirements.txt
 Procfile
@@ -22,13 +20,18 @@ git init
 git add .
 git commit -m "Initial commmit"
 
-heroku create todo-codewithharry
+heroku create flask-todo-arpit
 git remote -v
 git push heroku master
 
+heroku logs --tail
 
 
 Websites:
+https://flask-todoapp-arpit.herokuapp.com/ | https://git.heroku.com/flask-todoapp-arpit.git
+
 getbootstrap.com 
 https://flask.palletsprojects.com/en/2.0.x/quickstart/
 https://flask-sqlalchemy.palletsprojects.com/en/2.x/
+https://signup.heroku.com/account
+https://devcenter.heroku.com/articles/heroku-cli
