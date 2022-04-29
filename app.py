@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from pytube import YouTube, Playlist
-from os import listdir, remove
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///todo.db"
@@ -50,18 +48,6 @@ def update(sno):
         
     todo = Todo.query.filter_by(sno=sno).first()
     return render_template('update.html', todo=todo)
-
-@app.route('/download', methods=['GET', 'POST'])
-def download():
-    file = ''
-    if request.method == 'POST':
-        link = request.form['title']
-        YouTube(link).streams.get_highest_resolution().download('YT')
-        if len(listdir('YT')) != 0:
-            file += listdir('YT')[0]
-    print(file)
-    return render_template('download.html', file=file)
-
 
 @app.route('/delete/<int:sno>')
 def delete(sno):
