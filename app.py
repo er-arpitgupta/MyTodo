@@ -30,7 +30,7 @@ class Todo(db.Model):
         return f"{self.sno} - {self.title}"
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def home():
     if request.method=='POST':
         title = request.form['title']
         desc = request.form['desc']
@@ -78,9 +78,9 @@ def delete(sno):
     db.session.commit()
     return redirect("/")
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     db.create_all()
