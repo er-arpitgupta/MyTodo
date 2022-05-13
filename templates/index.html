@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
-{% block title %} Home{% endblock title %} 
+{% block title %}Home{% endblock title %} 
 {% block body %}
-
-    <div class="container my-3">
-        <h2>Add a Todo</h2>
+    <div class="container my-4">
+        <h2>&nbsp; Add a Todo</h2>
         <form action="/" method="POST">
             <div class="mb-3">
-              <label for="title" class="form-label">Todo Title</label>
-              <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp"> 
+              <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp" placeholder="Title" minlength="1" maxlength="20"> 
             </div>
             <div class="mb-3">
-              <label for="desc" class="form-label">Todo Description</label>
-              <input type="text" class="form-control" name="desc" id="desc">
+              <textarea class="form-control" name="desc" id="desc" cols="30" rows="10" placeholder="Description"></textarea>
             </div>
-            
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <input type="submit" name="submit" value="Add" class="btn btn-dark"></input>
           </form>
     </div>
     <div class="container my-3">

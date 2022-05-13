@@ -1,3 +1,26 @@
-body{
-    /* background-color: red; */
+.form-group input, .container input, .container textarea{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 5px 20px 5px 20px !important;
+    vertical-align: middle;
+}
+.form-group input:hover{
+    outline: 0px;
+}
+.container textarea {
+    padding-top: 10px !important;
+}
+.container{width : 50%;}
+table tr{
+    margin-bottom: 5px;
+}
+table td, table th{
+    margin-right: 5px;
+}
+table{
+    margin: 20px 50px;
+    border: 1px solid black;
+}
+@media (max-width: 991.98px){
+	.container{width: 90%;}
 }

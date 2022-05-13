@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    <table>
+        <thead>
+           <tr>
+               <th>Id</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Message</th>
+           </tr>
+        </thead>
+        <tbody>
+           {% for d in data %}
+            <tr>
+                <td>{{ d.id }}</td>
+                <td>{{ d.name }}</td>
+                <td>{{ d.phone }}</td>
+                <td>{{ d.mail }}</td>
+                <td>{{ d.msg }}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+     </table>
+{% endblock body %}

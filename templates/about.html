@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block body %}
+    <div class="container my-4">
+        <form action="/data" method="post" class="site-form">
+            <h2>&nbsp; Contact Us</h2>
+            <div class="form-group">
+                <input type="text" class="form-control px-3 py-4" placeholder="Your Name" name="name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control px-3 py-4" placeholder="Your Email" name="mail">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" class="form-control px-3 py-4" pattern="+[0-9]{2}[0-9]{10}" placeholder="Your Phone" name="phone">
+            </div>
+            <div class="form-group mb-5">
+                <textarea class="form-control px-3 py-4" cols="30" rows="10" placeholder="Write a Message" name="msg"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-dark" name="submit" value="Send">
+                <input type="reset" class="btn btn-dark" name="reset" value="Clear">
+            </div>
+        </form>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+{% endblock body %}
